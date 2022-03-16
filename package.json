@@ -1,30 +1,32 @@
 {
-  "name": "simple-mvc-no-templates",
+  "name": "simple-mvc-example",
   "version": "0.0.0",
   "engines": {
-    "node": "12.16.0",
-    "npm": "6.13.7"
+    "node": "12.18.3",
+    "npm": "6.14.8"
   },
   "description": "A simple Express MVC using only static files",
-  "main": "./src/app.js",
+  "main": "./server/app.js",
   "scripts": {
-    "start": "node ./src/app.js",
-    "pretest": "eslint ./src --fix",
-    "test": "echo \"tests complete\"",
-    "nodemon": "nodemon --watch ./src ./src/app.js"
+    "nodemon": "nodemon --watch ./server ./server/app.js",
+    "start": "node ./server/app.js",
+    "pretest": "eslint ./server --fix",
+    "test": "echo \"tests complete\""
   },
   "author": "Cody Van De Mark / Austin Willoughby",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.9.0",
+    "eslint": "^8.11.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.25.4",
-    "nodemon": "^2.0.13"
+    "nodemon": "^2.0.15"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.19.2",
     "compression": "^1.7.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3",
+    "mongoose": "^6.2.6",
     "serve-favicon": "^2.5.0"
   }
 }
